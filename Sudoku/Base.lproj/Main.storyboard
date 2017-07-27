@@ -881,6 +881,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pX-2Z-cy0">
                                                                 <rect key="frame" x="0.0" y="0.0" width="96" height="20.5"/>
                                                                 <state key="normal" title="Restart"/>
+                                                                <connections>
+                                                                    <action selector="RestartPuzzle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sKd-34-RUq"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -938,6 +941,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rz7-hP-N1t">
                                                                 <rect key="frame" x="0.0" y="0.0" width="96" height="20"/>
                                                                 <state key="normal" title="Erase"/>
+                                                                <connections>
+                                                                    <action selector="ErasePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3CI-Ma-3To"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -948,7 +954,6 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="96" height="20.5"/>
                                                                 <state key="normal" title="Solve"/>
                                                                 <connections>
-                                                                    <action selector="Solve:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vpq-pX-Yvl"/>
                                                                     <action selector="SolvePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ACP-Z3-gDc"/>
                                                                 </connections>
                                                             </button>
@@ -985,12 +990,15 @@
                         <outlet property="ClearXs" destination="d71-qg-8EI" id="OVk-ef-c9p"/>
                         <outlet property="Eight" destination="ndx-Ua-MbM" id="OWR-ka-bQF"/>
                         <outlet property="Eliminate" destination="aP5-0i-3KH" id="Iw4-Mm-lkc"/>
+                        <outlet property="Erase" destination="Rz7-hP-N1t" id="bvh-N0-AN0"/>
                         <outlet property="Five" destination="Qcc-dl-iih" id="ZlX-cT-8Fv"/>
                         <outlet property="Four" destination="nN3-vQ-Ff2" id="aRa-F4-eE2"/>
                         <outlet property="Nine" destination="f8h-Qi-n1o" id="BeA-Yo-JSp"/>
                         <outlet property="One" destination="egD-PK-Q5w" id="wmh-PJ-Cbz"/>
+                        <outlet property="Restart" destination="9pX-2Z-cy0" id="YJt-Sa-RAD"/>
                         <outlet property="Seven" destination="zgd-S3-6VU" id="Ama-x0-ddv"/>
                         <outlet property="Six" destination="cvf-YX-b1W" id="0fs-bB-5JF"/>
+                        <outlet property="Solve" destination="e3m-QW-lEB" id="q44-JC-fOT"/>
                         <outlet property="Three" destination="zHj-hK-z36" id="MKA-2y-X2i"/>
                         <outlet property="Two" destination="VUM-R9-BQ5" id="CZC-Ur-6pW"/>
                         <outletCollection property="SudokuCells" destination="CMb-ju-JXe" collectionClass="NSMutableArray" id="Y2g-1L-gYd"/>

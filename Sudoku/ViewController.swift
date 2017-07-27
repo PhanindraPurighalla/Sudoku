@@ -14,7 +14,19 @@ class ViewController: UIViewController {
     
     var isSolvePressed = false
     
+    var isErasePressed = false
+    
     var selectedSymbol = ""
+    
+    var originalMatrix = [["2","7","0","0","0","8","3","0","0"],
+                  ["0","0","0","7","0","0","0","8","0"],
+                  ["0","0","0","0","0","0","0","5","1"],
+                  ["7","0","0","6","0","1","0","9","5"],
+                  ["8","0","0","4","2","3","0","0","7"],
+                  ["1","4","0","5","0","7","0","0","8"],
+                  ["9","1","0","0","0","0","0","0","0"],
+                  ["0","6","0","0","0","5","0","0","0"],
+                  ["0","0","3","8","0","0","0","1","9"]]
     
     var matrix = [["2","7","0","0","0","8","3","0","0"],
                   ["0","0","0","7","0","0","0","8","0"],
@@ -703,14 +715,13 @@ class ViewController: UIViewController {
     
     func populateInitialState() {
         
-        generateArrays()
-        
         for row in 0...8 {
             for col in 0...8 {
+                matrix[row][col] = originalMatrix[row][col]
                 if let currentCell = view.subviews[0].subviews[row].subviews[col] as? UIButton {
-                    currentCell.setTitle(matrix[row][col], for: .normal)
-                    currentCell.setTitleColor(UIColor.blue, for: .normal)
-                    if matrix[row][col] == "0" {
+                    currentCell.setTitle(originalMatrix[row][col], for: .normal)
+                    currentCell.setTitleColor(UIColor.white, for: .normal)
+                    if originalMatrix[row][col] == "0" {
                         currentCell.isEnabled = true
                     }
                     else {
@@ -719,6 +730,8 @@ class ViewController: UIViewController {
                 }
             }
         }
+        
+        generateArrays()
         
         restoreBackgroundColor()
     }
@@ -804,6 +817,10 @@ class ViewController: UIViewController {
         Three.isEnabled = true
         Two.isEnabled = true
         One.isEnabled = true
+        
+        Erase.isEnabled = true
+        Eliminate.isEnabled = true
+        Solve.isEnabled = true
     }
     
     override func viewDidLoad() {
@@ -826,6 +843,8 @@ class ViewController: UIViewController {
             visuallyEliminateSymbol(symbol: selectedSymbol)
             populateUI()
             highlightSymbol(symbol: selectedSymbol)
+            Erase.isEnabled = false
+            Solve.isEnabled = false
         }
     }
     
@@ -850,6 +869,10 @@ class ViewController: UIViewController {
         Two.isEnabled = false
         One.isEnabled = false
         
+        Eliminate.isEnabled = true
+        Erase.isEnabled = true
+        Solve.isEnabled = true
+        
         selectedSymbol = "9"
     }
     
@@ -864,6 +887,10 @@ class ViewController: UIViewController {
         Three.isEnabled = false
         Two.isEnabled = false
         One.isEnabled = false
+        
+        Eliminate.isEnabled = true
+        Erase.isEnabled = true
+        Solve.isEnabled = true
         
         selectedSymbol = "8"
     }
@@ -882,6 +909,10 @@ class ViewController: UIViewController {
         Two.isEnabled = false
         One.isEnabled = false
         
+        Eliminate.isEnabled = true
+        Erase.isEnabled = true
+        Solve.isEnabled = true
+        
         selectedSymbol = "7"
     }
     
@@ -896,6 +927,10 @@ class ViewController: UIViewController {
         Three.isEnabled = false
         Two.isEnabled = false
         One.isEnabled = false
+        
+        Eliminate.isEnabled = true
+        Erase.isEnabled = true
+        Solve.isEnabled = true
         
         selectedSymbol = "6"
     }
@@ -913,6 +948,10 @@ class ViewController: UIViewController {
         Two.isEnabled = false
         One.isEnabled = false
         
+        Eliminate.isEnabled = true
+        Erase.isEnabled = true
+        Solve.isEnabled = true
+        
         selectedSymbol = "5"
     }
     
@@ -928,6 +967,10 @@ class ViewController: UIViewController {
         Three.isEnabled = false
         Two.isEnabled = false
         One.isEnabled = false
+        
+        Eliminate.isEnabled = true
+        Erase.isEnabled = true
+        Solve.isEnabled = true
             
         selectedSymbol = "4"
     }
@@ -944,6 +987,10 @@ class ViewController: UIViewController {
         Two.isEnabled = false
         One.isEnabled = false
         
+        Eliminate.isEnabled = true
+        Erase.isEnabled = true
+        Solve.isEnabled = true
+        
         selectedSymbol = "3"
     }
     
@@ -958,6 +1005,10 @@ class ViewController: UIViewController {
         Four.isEnabled = false
         Three.isEnabled = false
         One.isEnabled = false
+        
+        Eliminate.isEnabled = true
+        Erase.isEnabled = true
+        Solve.isEnabled = true
             
         selectedSymbol = "2"
     }
@@ -975,14 +1026,38 @@ class ViewController: UIViewController {
         Three.isEnabled = false
         Two.isEnabled = false
         
+        Eliminate.isEnabled = true
+        Erase.isEnabled = true
+        Solve.isEnabled = true
+        
         selectedSymbol = "1"
     }
     
-    @IBAction func Solve(_ sender: UIButton) {
+    
+    @IBOutlet weak var Restart: UIButton!
+    
+    
+    @IBAction func RestartPuzzle(_ sender: UIButton) {
+        populateInitialState()
     }
+    
+    
+    @IBOutlet weak var Solve: UIButton!
     
     @IBAction func SolvePressed(_ sender: UIButton) {
         isSolvePressed = true
+        Erase.isEnabled = false
+        Eliminate.isEnabled = false
+    }
+    
+    
+    @IBOutlet weak var Erase: UIButton!
+    
+    
+    @IBAction func ErasePressed(_ sender: UIButton) {
+        isErasePressed = true
+        Eliminate.isEnabled = false
+        Solve.isEnabled = false
     }
     
     @IBOutlet var SudokuCells: [UIButton]!
@@ -1004,6 +1079,23 @@ class ViewController: UIViewController {
                 }
             }
             isSolvePressed = false
+        }
+        
+        if isErasePressed == true && selectedSymbol != "" {
+            for row in 0...8 {
+                for col in 0...8 {
+                    if sender == view.subviews[0].subviews[row].subviews[col] as? UIButton {
+                        print ("Cell at: \(row) \(col) requested to be erased from a value of \(selectedSymbol)")
+                        if sender.title(for: .normal) == selectedSymbol {
+                            matrix[row][col] = "0"
+                            selectedSymbol = ""
+                            populateUI()
+                            restoreBackgroundColor()
+                        }
+                    }
+                }
+            }
+            isErasePressed = false
         }
     }
 }
