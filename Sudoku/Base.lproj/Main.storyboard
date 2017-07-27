@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sudoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ohJ-SA-DKd">
+                                <rect key="frame" x="16" y="20" width="288" height="460"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="o82-NM-Own">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="32.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMx-tM-FWs">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vme-0d-LP6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ps9-w3-cx8">
+                                                <rect key="frame" x="32" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFt-ph-wj8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s17-if-b9f">
+                                                <rect key="frame" x="64" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlp-aO-bCa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lq-kD-21m">
+                                                <rect key="frame" x="96" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVL-QE-hfX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0RI-be-hAk">
+                                                <rect key="frame" x="128" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ez-Ls-7ZK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzR-dI-qfa">
+                                                <rect key="frame" x="160" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fzM-pi-lOl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHf-W3-4VR">
+                                                <rect key="frame" x="192" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dXH-gh-kmU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ltk-5Z-NXZ">
+                                                <rect key="frame" x="224" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SBx-af-AE0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-au-JiY">
+                                                <rect key="frame" x="256" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Pa-TH-92N"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZHM-5n-iP3">
+                                        <rect key="frame" x="0.0" y="32.5" width="288" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVI-ZN-23b">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHq-lj-pNy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIW-NM-Ntd">
+                                                <rect key="frame" x="32" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MgA-EP-gMn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTd-EW-d5p">
+                                                <rect key="frame" x="64" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rtn-Kn-0vW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWp-F6-u7E">
+                                                <rect key="frame" x="96" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pbq-lY-faf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDX-fc-wvp">
+                                                <rect key="frame" x="128" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h1i-nx-XOm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofs-V5-fn2">
+                                                <rect key="frame" x="160" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eKJ-6W-mSK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1B-Dx-lJT">
+                                                <rect key="frame" x="192" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4O5-Jf-FpC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVo-0w-3Zz">
+                                                <rect key="frame" x="224" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dLh-Ao-qGn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnJ-OZ-qaF">
+                                                <rect key="frame" x="256" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AEZ-wy-ffM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fIo-oV-ZKY">
+                                        <rect key="frame" x="0.0" y="64.5" width="288" height="32.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaw-Ko-ODQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0iB-03-OWe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuT-YG-SPL">
+                                                <rect key="frame" x="32" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PKp-Oj-SFS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tk-B1-zcR">
+                                                <rect key="frame" x="64" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N0C-dR-S90"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sC-r4-ePh">
+                                                <rect key="frame" x="96" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uwM-3c-1mI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4w-gr-k0i">
+                                                <rect key="frame" x="128" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H5Q-Jx-xFm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iS-YE-Osi">
+                                                <rect key="frame" x="160" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2uG-Sv-nGc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eq-oG-v8e">
+                                                <rect key="frame" x="192" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cAL-Tw-974"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKd-Hb-HNz">
+                                                <rect key="frame" x="224" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q2S-IR-Sio"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9r-UW-3nA">
+                                                <rect key="frame" x="256" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Yh-ra-TJv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BcB-UT-39h">
+                                        <rect key="frame" x="0.0" y="97" width="288" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAA-Kd-AmG">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L32-zQ-jTI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZb-Dk-91i">
+                                                <rect key="frame" x="32" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NLr-92-qBT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0z-Y6-SxE">
+                                                <rect key="frame" x="64" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jna-1y-ILk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G83-Se-Zee">
+                                                <rect key="frame" x="96" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j9P-oD-NQS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTj-gs-TAc">
+                                                <rect key="frame" x="128" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HbC-g1-YSe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owN-Mb-zK9">
+                                                <rect key="frame" x="160" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eA3-Sf-fLj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwt-b8-WQc">
+                                                <rect key="frame" x="192" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CmI-0L-GWn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xew-kQ-jnj">
+                                                <rect key="frame" x="224" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fM-R0-XdD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tne-PG-MaU">
+                                                <rect key="frame" x="256" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WmU-iZ-wiu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5LK-rv-5xk">
+                                        <rect key="frame" x="0.0" y="129" width="288" height="32.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSR-yQ-gL7">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uGx-4t-KPj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02S-SE-cuS">
+                                                <rect key="frame" x="32" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lHo-r8-s9Q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZ3-0o-6VD">
+                                                <rect key="frame" x="64" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Jh-f9-kUf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulx-zj-ZO7">
+                                                <rect key="frame" x="96" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ZU-bh-zfB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIu-3p-b8u">
+                                                <rect key="frame" x="128" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ayi-0K-Ctt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9Y-XX-mZc">
+                                                <rect key="frame" x="160" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rXS-3a-P72"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMb-ju-JXe">
+                                                <rect key="frame" x="192" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nqM-OJ-FZe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4we-tR-NOE">
+                                                <rect key="frame" x="224" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="526-W7-WU3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECd-wc-wL5">
+                                                <rect key="frame" x="256" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9yQ-0v-2lc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eQN-VB-5qe">
+                                        <rect key="frame" x="0.0" y="161.5" width="288" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUe-iR-vJc">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oeq-aD-Mig"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzF-iN-tMj">
+                                                <rect key="frame" x="32" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fNM-JK-dy7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDm-2R-xYu">
+                                                <rect key="frame" x="64" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C6e-ki-nbr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pg-ra-gMH">
+                                                <rect key="frame" x="96" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rua-Ws-Yfb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5e-xS-tRc">
+                                                <rect key="frame" x="128" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZ9-zu-YGW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtb-Tg-m6J">
+                                                <rect key="frame" x="160" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Us-Id-Sf5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woF-8q-fJP">
+                                                <rect key="frame" x="192" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jO6-BR-yAS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAX-GP-D6j">
+                                                <rect key="frame" x="224" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BT4-bb-ZWh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxW-cA-cbA">
+                                                <rect key="frame" x="256" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vTq-eg-qlA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zMN-1v-eVt">
+                                        <rect key="frame" x="0.0" y="193.5" width="288" height="32.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKf-tj-VE1">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9TD-O1-BEH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPG-wa-gaK">
+                                                <rect key="frame" x="32" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GpE-pY-emL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5M-ax-aOn">
+                                                <rect key="frame" x="64" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N8X-kg-4hW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Oe-lg-8di">
+                                                <rect key="frame" x="96" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bry-5W-TNF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gx0-uf-tuQ">
+                                                <rect key="frame" x="128" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ky-MH-gXY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4o-KT-IxJ">
+                                                <rect key="frame" x="160" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c4U-WY-ba6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuC-Dv-W56">
+                                                <rect key="frame" x="192" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jCN-bu-QnM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCW-rb-f3N">
+                                                <rect key="frame" x="224" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IoG-B4-hju"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="str-ei-0vM">
+                                                <rect key="frame" x="256" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4y6-Rb-vbq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PRl-7q-pH7">
+                                        <rect key="frame" x="0.0" y="226" width="288" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg4-NC-taX">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1jH-fP-8fa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2E5-g3-tI7">
+                                                <rect key="frame" x="32" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DC3-oZ-rIG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZd-g0-bXS">
+                                                <rect key="frame" x="64" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e0n-T8-f4m"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73w-VS-Cad">
+                                                <rect key="frame" x="96" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DlY-32-49C"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjF-UF-cLF">
+                                                <rect key="frame" x="128" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nNv-Mm-AhN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xf-Ex-8X5">
+                                                <rect key="frame" x="160" y="0.0" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HFA-OR-14S"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgm-8F-AMT">
+                                                <rect key="frame" x="192" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v0b-m1-PxA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpO-CU-qyd">
+                                                <rect key="frame" x="224" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="beq-NC-lnX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28V-gH-p62">
+                                                <rect key="frame" x="256" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0XX-sJ-hnb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kf4-5t-Wyt">
+                                        <rect key="frame" x="0.0" y="258" width="288" height="32.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edj-CU-wTY">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="POp-fX-k5m"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDF-dJ-9bB">
+                                                <rect key="frame" x="32" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l56-yQ-Iq3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySW-RZ-2H3">
+                                                <rect key="frame" x="64" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ohh-9M-eIL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDu-BN-R1l">
+                                                <rect key="frame" x="96" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MsC-Nf-iI7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahk-k2-mPK">
+                                                <rect key="frame" x="128" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5uI-Xf-HgP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iT-Wj-QOZ">
+                                                <rect key="frame" x="160" y="0.0" width="32" height="32.5"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BPl-SX-T7E"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jl-sG-UZo">
+                                                <rect key="frame" x="192" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sxN-tR-GBu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKf-iT-q28">
+                                                <rect key="frame" x="224" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9OR-bk-Vkz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncV-t2-NiR">
+                                                <rect key="frame" x="256" y="0.0" width="32" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="SudokuCellSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kds-36-NIJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hAA-bo-Xck">
+                                        <rect key="frame" x="0.0" y="290.5" width="288" height="109"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HxN-QC-bKj">
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="109"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jrH-88-bsd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="36.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egD-PK-Q5w">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="36.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                                <state key="normal" title="1"/>
+                                                                <connections>
+                                                                    <action selector="OnePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZ9-eV-Hc5"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kYj-tR-vpf">
+                                                        <rect key="frame" x="0.0" y="36.5" width="96" height="36"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nN3-vQ-Ff2">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="36"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                                <state key="normal" title="4"/>
+                                                                <connections>
+                                                                    <action selector="FourPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJm-Q6-FPN"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="V3y-b8-q1P">
+                                                        <rect key="frame" x="0.0" y="72.5" width="96" height="36.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgd-S3-6VU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="36.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                                <state key="normal" title="7"/>
+                                                                <connections>
+                                                                    <action selector="SevenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xm8-La-iUj"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CSS-Hv-49c">
+                                                <rect key="frame" x="96" y="0.0" width="96" height="109"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uzf-wj-BdP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="36.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUM-R9-BQ5">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="36.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                                <state key="normal" title="2"/>
+                                                                <connections>
+                                                                    <action selector="TwoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HPn-EJ-pFZ"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ahp-hY-1Sw">
+                                                        <rect key="frame" x="0.0" y="36.5" width="96" height="36"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcc-dl-iih">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="36"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                                <state key="normal" title="5"/>
+                                                                <connections>
+                                                                    <action selector="FivePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t8D-VJ-hWS"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="P9L-Re-xkg">
+                                                        <rect key="frame" x="0.0" y="72.5" width="96" height="36.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndx-Ua-MbM">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="36.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                                <state key="normal" title="8"/>
+                                                                <connections>
+                                                                    <action selector="EightPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fe5-iQ-dke"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YUf-WT-0Q8">
+                                                <rect key="frame" x="192" y="0.0" width="96" height="109"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VFM-qL-vUf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="36.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHj-hK-z36">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="36.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                                <state key="normal" title="3"/>
+                                                                <connections>
+                                                                    <action selector="ThreePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7OJ-Ax-tyg"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Dg-bg-E7f">
+                                                        <rect key="frame" x="0.0" y="36.5" width="96" height="36"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvf-YX-b1W">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="36"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                                <state key="normal" title="6"/>
+                                                                <connections>
+                                                                    <action selector="SixPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IEf-nD-2gV"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fUt-Zc-me8">
+                                                        <rect key="frame" x="0.0" y="72.5" width="96" height="36.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8h-Qi-n1o">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="36.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                                <state key="normal" title="9"/>
+                                                                <connections>
+                                                                    <action selector="NinePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eBV-lK-nhj"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eQY-0c-ooI">
+                                        <rect key="frame" x="0.0" y="399.5" width="288" height="60.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="w6P-iE-B5V">
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="60.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LD1-C1-pzo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="20"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMY-Pa-CDw">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="20"/>
+                                                                <state key="normal" title="New Puzzle"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9sd-eZ-SbM">
+                                                        <rect key="frame" x="0.0" y="20" width="96" height="20.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pX-2Z-cy0">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="20.5"/>
+                                                                <state key="normal" title="Restart"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9H3-Ox-cvK">
+                                                        <rect key="frame" x="0.0" y="40.5" width="96" height="20"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaD-8k-xEw">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="20"/>
+                                                                <state key="normal" title="Difficulty"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uGu-3j-V4o">
+                                                <rect key="frame" x="96" y="0.0" width="96" height="60.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kKW-8y-Mec">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="20"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aP5-0i-3KH">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="20"/>
+                                                                <state key="normal" title="Visualize"/>
+                                                                <connections>
+                                                                    <action selector="EliminatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sRi-R0-4rn"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="C9x-DL-JwH">
+                                                        <rect key="frame" x="0.0" y="20" width="96" height="20.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNV-Zf-UyE">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="20.5"/>
+                                                                <state key="normal" title="Markup"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="O8K-0p-S7H">
+                                                        <rect key="frame" x="0.0" y="40.5" width="96" height="20"/>
+                                                        <subviews>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="C3g-7v-GnV">
+                                                                <rect key="frame" x="-2" y="0.0" width="100" height="21"/>
+                                                            </slider>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Pmm-RU-gdY">
+                                                <rect key="frame" x="192" y="0.0" width="96" height="60.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Phr-Xs-rbu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="20"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rz7-hP-N1t">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="20"/>
+                                                                <state key="normal" title="Erase"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MBw-en-9nQ">
+                                                        <rect key="frame" x="0.0" y="20" width="96" height="20.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3m-QW-lEB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="20.5"/>
+                                                                <state key="normal" title="Solve"/>
+                                                                <connections>
+                                                                    <action selector="Solve:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vpq-pX-Yvl"/>
+                                                                    <action selector="SolvePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ACP-Z3-gDc"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vSo-d2-Rbs">
+                                                        <rect key="frame" x="0.0" y="40.5" width="96" height="20"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d71-qg-8EI">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="20"/>
+                                                                <state key="normal" title="Clear Xs"/>
+                                                                <connections>
+                                                                    <action selector="ClearXsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UgQ-48-7DU"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ohJ-SA-DKd" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="0oW-za-2pE"/>
+                            <constraint firstItem="ohJ-SA-DKd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="QK3-rp-Nsa"/>
+                            <constraint firstItem="ohJ-SA-DKd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="n3m-ue-hCA"/>
+                            <constraint firstItem="ohJ-SA-DKd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yd1-Hk-Z3y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ClearXs" destination="d71-qg-8EI" id="OVk-ef-c9p"/>
+                        <outlet property="Eight" destination="ndx-Ua-MbM" id="OWR-ka-bQF"/>
+                        <outlet property="Eliminate" destination="aP5-0i-3KH" id="Iw4-Mm-lkc"/>
+                        <outlet property="Five" destination="Qcc-dl-iih" id="ZlX-cT-8Fv"/>
+                        <outlet property="Four" destination="nN3-vQ-Ff2" id="aRa-F4-eE2"/>
+                        <outlet property="Nine" destination="f8h-Qi-n1o" id="BeA-Yo-JSp"/>
+                        <outlet property="One" destination="egD-PK-Q5w" id="wmh-PJ-Cbz"/>
+                        <outlet property="Seven" destination="zgd-S3-6VU" id="Ama-x0-ddv"/>
+                        <outlet property="Six" destination="cvf-YX-b1W" id="0fs-bB-5JF"/>
+                        <outlet property="Three" destination="zHj-hK-z36" id="MKA-2y-X2i"/>
+                        <outlet property="Two" destination="VUM-R9-BQ5" id="CZC-Ur-6pW"/>
+                        <outletCollection property="SudokuCells" destination="CMb-ju-JXe" collectionClass="NSMutableArray" id="Y2g-1L-gYd"/>
+                        <outletCollection property="SudokuCells" destination="gMx-tM-FWs" collectionClass="NSMutableArray" id="pTa-Ek-2s5"/>
+                        <outletCollection property="SudokuCells" destination="Ps9-w3-cx8" collectionClass="NSMutableArray" id="oUs-cp-eDd"/>
+                        <outletCollection property="SudokuCells" destination="s17-if-b9f" collectionClass="NSMutableArray" id="aM1-Rd-R0A"/>
+                        <outletCollection property="SudokuCells" destination="7Lq-kD-21m" collectionClass="NSMutableArray" id="LY8-sT-bHJ"/>
+                        <outletCollection property="SudokuCells" destination="0RI-be-hAk" collectionClass="NSMutableArray" id="NsB-bG-Liu"/>
+                        <outletCollection property="SudokuCells" destination="IzR-dI-qfa" collectionClass="NSMutableArray" id="r1J-GG-5Mf"/>
+                        <outletCollection property="SudokuCells" destination="bHf-W3-4VR" collectionClass="NSMutableArray" id="d0U-wH-ZcR"/>
+                        <outletCollection property="SudokuCells" destination="Ltk-5Z-NXZ" collectionClass="NSMutableArray" id="eLp-g7-HA3"/>
+                        <outletCollection property="SudokuCells" destination="Sbd-au-JiY" collectionClass="NSMutableArray" id="cMN-wD-yaB"/>
+                        <outletCollection property="SudokuCells" destination="DVI-ZN-23b" collectionClass="NSMutableArray" id="mqY-OP-xLA"/>
+                        <outletCollection property="SudokuCells" destination="mIW-NM-Ntd" collectionClass="NSMutableArray" id="bWa-ys-PAj"/>
+                        <outletCollection property="SudokuCells" destination="RTd-EW-d5p" collectionClass="NSMutableArray" id="Pcq-ib-tLU"/>
+                        <outletCollection property="SudokuCells" destination="JWp-F6-u7E" collectionClass="NSMutableArray" id="yNi-5I-rLk"/>
+                        <outletCollection property="SudokuCells" destination="UDX-fc-wvp" collectionClass="NSMutableArray" id="XxJ-Jd-ArM"/>
+                        <outletCollection property="SudokuCells" destination="ofs-V5-fn2" collectionClass="NSMutableArray" id="cVc-sv-lVO"/>
+                        <outletCollection property="SudokuCells" destination="w1B-Dx-lJT" collectionClass="NSMutableArray" id="dgX-Bc-baB"/>
+                        <outletCollection property="SudokuCells" destination="nVo-0w-3Zz" collectionClass="NSMutableArray" id="99h-go-4ic"/>
+                        <outletCollection property="SudokuCells" destination="DnJ-OZ-qaF" collectionClass="NSMutableArray" id="upb-dx-jjU"/>
+                        <outletCollection property="SudokuCells" destination="eaw-Ko-ODQ" collectionClass="NSMutableArray" id="tvX-bX-EIg"/>
+                        <outletCollection property="SudokuCells" destination="SuT-YG-SPL" collectionClass="NSMutableArray" id="TVh-SQ-thM"/>
+                        <outletCollection property="SudokuCells" destination="2Tk-B1-zcR" collectionClass="NSMutableArray" id="hyN-jv-Uo3"/>
+                        <outletCollection property="SudokuCells" destination="9sC-r4-ePh" collectionClass="NSMutableArray" id="j9w-jy-Tdd"/>
+                        <outletCollection property="SudokuCells" destination="v4w-gr-k0i" collectionClass="NSMutableArray" id="36B-6n-h6w"/>
+                        <outletCollection property="SudokuCells" destination="3iS-YE-Osi" collectionClass="NSMutableArray" id="6t4-35-2Q5"/>
+                        <outletCollection property="SudokuCells" destination="5eq-oG-v8e" collectionClass="NSMutableArray" id="7Fx-dL-qfX"/>
+                        <outletCollection property="SudokuCells" destination="cKd-Hb-HNz" collectionClass="NSMutableArray" id="vU5-gt-2K9"/>
+                        <outletCollection property="SudokuCells" destination="q9r-UW-3nA" collectionClass="NSMutableArray" id="lbd-z0-6g8"/>
+                        <outletCollection property="SudokuCells" destination="kAA-Kd-AmG" collectionClass="NSMutableArray" id="KsH-xO-jeW"/>
+                        <outletCollection property="SudokuCells" destination="fZb-Dk-91i" collectionClass="NSMutableArray" id="TzZ-tz-fj0"/>
+                        <outletCollection property="SudokuCells" destination="E0z-Y6-SxE" collectionClass="NSMutableArray" id="Mlo-bp-bZu"/>
+                        <outletCollection property="SudokuCells" destination="G83-Se-Zee" collectionClass="NSMutableArray" id="Q1n-sn-8FP"/>
+                        <outletCollection property="SudokuCells" destination="dTj-gs-TAc" collectionClass="NSMutableArray" id="8Om-0H-Hmy"/>
+                        <outletCollection property="SudokuCells" destination="owN-Mb-zK9" collectionClass="NSMutableArray" id="xJL-p5-R9X"/>
+                        <outletCollection property="SudokuCells" destination="pwt-b8-WQc" collectionClass="NSMutableArray" id="DRD-4f-A6l"/>
+                        <outletCollection property="SudokuCells" destination="xew-kQ-jnj" collectionClass="NSMutableArray" id="Dsa-I0-cP0"/>
+                        <outletCollection property="SudokuCells" destination="tne-PG-MaU" collectionClass="NSMutableArray" id="ZDY-S0-2TP"/>
+                        <outletCollection property="SudokuCells" destination="RSR-yQ-gL7" collectionClass="NSMutableArray" id="Hc4-cn-heT"/>
+                        <outletCollection property="SudokuCells" destination="02S-SE-cuS" collectionClass="NSMutableArray" id="a9E-5g-lvZ"/>
+                        <outletCollection property="SudokuCells" destination="rZ3-0o-6VD" collectionClass="NSMutableArray" id="MLa-9c-aXc"/>
+                        <outletCollection property="SudokuCells" destination="ulx-zj-ZO7" collectionClass="NSMutableArray" id="F0K-dP-YmR"/>
+                        <outletCollection property="SudokuCells" destination="cIu-3p-b8u" collectionClass="NSMutableArray" id="3ug-wA-gW4"/>
+                        <outletCollection property="SudokuCells" destination="T9Y-XX-mZc" collectionClass="NSMutableArray" id="ynt-hl-Xkz"/>
+                        <outletCollection property="SudokuCells" destination="4we-tR-NOE" collectionClass="NSMutableArray" id="aRD-s8-CSS"/>
+                        <outletCollection property="SudokuCells" destination="ECd-wc-wL5" collectionClass="NSMutableArray" id="IvO-oo-GRi"/>
+                        <outletCollection property="SudokuCells" destination="rUe-iR-vJc" collectionClass="NSMutableArray" id="z8c-MD-oao"/>
+                        <outletCollection property="SudokuCells" destination="UzF-iN-tMj" collectionClass="NSMutableArray" id="iyl-If-bLN"/>
+                        <outletCollection property="SudokuCells" destination="bDm-2R-xYu" collectionClass="NSMutableArray" id="BJc-NC-aer"/>
+                        <outletCollection property="SudokuCells" destination="5pg-ra-gMH" collectionClass="NSMutableArray" id="gZ5-NU-avt"/>
+                        <outletCollection property="SudokuCells" destination="f5e-xS-tRc" collectionClass="NSMutableArray" id="u5n-3d-egd"/>
+                        <outletCollection property="SudokuCells" destination="Jtb-Tg-m6J" collectionClass="NSMutableArray" id="18k-Zk-j3K"/>
+                        <outletCollection property="SudokuCells" destination="woF-8q-fJP" collectionClass="NSMutableArray" id="6dy-ik-wak"/>
+                        <outletCollection property="SudokuCells" destination="nAX-GP-D6j" collectionClass="NSMutableArray" id="6ao-lL-BLk"/>
+                        <outletCollection property="SudokuCells" destination="NxW-cA-cbA" collectionClass="NSMutableArray" id="91g-Vd-PHp"/>
+                        <outletCollection property="SudokuCells" destination="jKf-tj-VE1" collectionClass="NSMutableArray" id="sSw-xl-y9a"/>
+                        <outletCollection property="SudokuCells" destination="uPG-wa-gaK" collectionClass="NSMutableArray" id="4dn-Gr-2L4"/>
+                        <outletCollection property="SudokuCells" destination="R5M-ax-aOn" collectionClass="NSMutableArray" id="US9-iO-iBd"/>
+                        <outletCollection property="SudokuCells" destination="1Oe-lg-8di" collectionClass="NSMutableArray" id="oBZ-2W-1uZ"/>
+                        <outletCollection property="SudokuCells" destination="gx0-uf-tuQ" collectionClass="NSMutableArray" id="R6R-ef-oMC"/>
+                        <outletCollection property="SudokuCells" destination="a4o-KT-IxJ" collectionClass="NSMutableArray" id="rwp-bh-evA"/>
+                        <outletCollection property="SudokuCells" destination="TuC-Dv-W56" collectionClass="NSMutableArray" id="6Kn-bF-2Uy"/>
+                        <outletCollection property="SudokuCells" destination="HCW-rb-f3N" collectionClass="NSMutableArray" id="j9Z-qa-3t0"/>
+                        <outletCollection property="SudokuCells" destination="str-ei-0vM" collectionClass="NSMutableArray" id="nxf-9E-AWX"/>
+                        <outletCollection property="SudokuCells" destination="lg4-NC-taX" collectionClass="NSMutableArray" id="TiD-Bz-gph"/>
+                        <outletCollection property="SudokuCells" destination="2E5-g3-tI7" collectionClass="NSMutableArray" id="7hZ-R5-pH5"/>
+                        <outletCollection property="SudokuCells" destination="bZd-g0-bXS" collectionClass="NSMutableArray" id="kIZ-sd-Juc"/>
+                        <outletCollection property="SudokuCells" destination="73w-VS-Cad" collectionClass="NSMutableArray" id="pRU-rj-1TF"/>
+                        <outletCollection property="SudokuCells" destination="kjF-UF-cLF" collectionClass="NSMutableArray" id="Vtk-1t-lNj"/>
+                        <outletCollection property="SudokuCells" destination="7Xf-Ex-8X5" collectionClass="NSMutableArray" id="qHV-Lj-yFV"/>
+                        <outletCollection property="SudokuCells" destination="Cgm-8F-AMT" collectionClass="NSMutableArray" id="WU3-gQ-MWu"/>
+                        <outletCollection property="SudokuCells" destination="gpO-CU-qyd" collectionClass="NSMutableArray" id="6fX-Qz-GIH"/>
+                        <outletCollection property="SudokuCells" destination="28V-gH-p62" collectionClass="NSMutableArray" id="cJy-Hg-1AO"/>
+                        <outletCollection property="SudokuCells" destination="Edj-CU-wTY" collectionClass="NSMutableArray" id="xU2-Fq-8Zg"/>
+                        <outletCollection property="SudokuCells" destination="eDF-dJ-9bB" collectionClass="NSMutableArray" id="Qvo-cg-uV0"/>
+                        <outletCollection property="SudokuCells" destination="ySW-RZ-2H3" collectionClass="NSMutableArray" id="tuy-Ig-cgf"/>
+                        <outletCollection property="SudokuCells" destination="hDu-BN-R1l" collectionClass="NSMutableArray" id="8u7-yh-BSz"/>
+                        <outletCollection property="SudokuCells" destination="ahk-k2-mPK" collectionClass="NSMutableArray" id="jIo-d1-EVU"/>
+                        <outletCollection property="SudokuCells" destination="4iT-Wj-QOZ" collectionClass="NSMutableArray" id="5IA-gj-QT9"/>
+                        <outletCollection property="SudokuCells" destination="2jl-sG-UZo" collectionClass="NSMutableArray" id="IMf-vw-cip"/>
+                        <outletCollection property="SudokuCells" destination="tKf-iT-q28" collectionClass="NSMutableArray" id="TME-OF-ibw"/>
+                        <outletCollection property="SudokuCells" destination="ncV-t2-NiR" collectionClass="NSMutableArray" id="jas-0S-lfm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
