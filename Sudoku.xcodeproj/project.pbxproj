@@ -12,6 +12,7 @@
 		A57E9A8B1F263BF500999207 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57E9A891F263BF500999207 /* Main.storyboard */; };
 		A57E9A8D1F263BF500999207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57E9A8C1F263BF500999207 /* Assets.xcassets */; };
 		A57E9A901F263BF500999207 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57E9A8E1F263BF500999207 /* LaunchScreen.storyboard */; };
+		A5C4DBB31F2BAB85004B2220 /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C4DBB21F2BAB85004B2220 /* PuzzleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A57E9A8C1F263BF500999207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A57E9A8F1F263BF500999207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A57E9A911F263BF500999207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5C4DBB21F2BAB85004B2220 /* PuzzleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				A57E9A8C1F263BF500999207 /* Assets.xcassets */,
 				A57E9A8E1F263BF500999207 /* LaunchScreen.storyboard */,
 				A57E9A911F263BF500999207 /* Info.plist */,
+				A5C4DBB21F2BAB85004B2220 /* PuzzleViewController.swift */,
 			);
 			path = Sudoku;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A57E9A881F263BF500999207 /* ViewController.swift in Sources */,
+				A5C4DBB31F2BAB85004B2220 /* PuzzleViewController.swift in Sources */,
 				A57E9A861F263BF500999207 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +308,7 @@
 				A57E9A961F263BF500999207 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
